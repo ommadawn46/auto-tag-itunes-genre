@@ -1,0 +1,6 @@
+graphviz
+pywin32
+requests
+retry
+tqdm
+yaml

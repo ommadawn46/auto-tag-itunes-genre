@@ -1,0 +1,450 @@
+strict digraph {
+	"alternative metal"
+	"alternative rock"
+	"avant-prog"
+	"black metal"
+	classical
+	country
+	"death metal"
+	"doom metal"
+	electronic
+	emo
+	"experimental rock"
+	folk
+	"folk metal"
+	funk
+	"hardcore punk"
+	"heavy metal"
+	"hip-hop"
+	"indie rock"
+	industrial
+	jazz
+	metal
+	metalcore
+	"modern classical"
+	noise
+	pop
+	"pop rock"
+	"post-punk"
+	"progressive metal"
+	"progressive rock"
+	"psychedelic folk"
+	"psychedelic rock"
+	"punk rock"
+	"r&b"
+	rock
+	"rock and roll"
+	"sludge metal"
+	soundtracks
+	techno
+	trance
+	subgraph cluster_classical {
+		color="#409670" label=classical
+		classical -> "modern classical"
+		subgraph "cluster_modern classical" {
+			color="#a3d01a" label="modern classical"
+			"modern classical" -> minimalism
+		}
+	}
+	subgraph cluster_country {
+		color="#58fafb" label=country
+		country -> "alt-country"
+		country -> americana
+	}
+	subgraph cluster_electronic {
+		color="#628932" label=electronic
+		electronic -> "alternative dance"
+		electronic -> ambient
+		electronic -> "big beat"
+		electronic -> breakcore
+		electronic -> "bubblegum bass"
+		electronic -> chillwave
+		electronic -> chiptune
+		electronic -> "dance-punk"
+		electronic -> disco
+		electronic -> downtempo
+		electronic -> drone
+		electronic -> "drum and bass"
+		electronic -> dubstep
+		electronic -> ebm
+		electronic -> electro
+		electronic -> electronica
+		electronic -> electropop
+		electronic -> eurodance
+		electronic -> folktronica
+		electronic -> footwork
+		electronic -> "future garage"
+		electronic -> glitch
+		electronic -> "glitch hop"
+		electronic -> "glitch pop"
+		electronic -> hardstyle
+		electronic -> house
+		electronic -> hyperpop
+		electronic -> idm
+		electronic -> indietronica
+		electronic -> industrial
+		subgraph cluster_industrial {
+			color="#9b6695" label=industrial
+			industrial -> "death industrial"
+			industrial -> "martial industrial"
+		}
+		electronic -> krautrock
+		electronic -> noise
+		subgraph cluster_noise {
+			color="#bced49" label=noise
+			noise -> "harsh noise"
+			noise -> "power electronics"
+			noise -> "power noise"
+		}
+		electronic -> synthpop
+		electronic -> synthwave
+		electronic -> techno
+		subgraph cluster_techno {
+			color="#e6e8a2" label=techno
+			techno -> "dub techno"
+			techno -> "minimal techno"
+		}
+		electronic -> trance
+		subgraph cluster_trance {
+			color="#27492a" label=trance
+			trance -> psytrance
+		}
+		electronic -> "trip-hop"
+		electronic -> vaporwave
+		electronic -> wonky
+	}
+	subgraph cluster_folk {
+		color="#ac74c0" label=folk
+		folk -> "basque folk"
+		folk -> "canzone d'autore"
+		folk -> "chamber folk"
+		folk -> "indie folk"
+		folk -> neofolk
+		folk -> "psychedelic folk"
+		subgraph "cluster_psychedelic folk" {
+			color="#a572c7" label="psychedelic folk"
+			"psychedelic folk" -> "freak folk"
+		}
+	}
+	subgraph "cluster_hip-hop" {
+		color="#92abe4" label="hip-hop"
+		"hip-hop" -> "abstract hip-hop"
+		"hip-hop" -> "alternative hip-hop"
+		"hip-hop" -> "boom bap"
+		"hip-hop" -> "cloud rap"
+		"hip-hop" -> "conscious hip-hop"
+		"hip-hop" -> "east coast rap"
+		"hip-hop" -> "emo rap"
+		"hip-hop" -> "experimental hip-hop"
+		"hip-hop" -> "g-funk"
+		"hip-hop" -> "gangsta rap"
+		"hip-hop" -> "hardcore hip-hop"
+		"hip-hop" -> "jazz rap"
+		"hip-hop" -> trap
+		"hip-hop" -> "trip-hop"
+	}
+	subgraph cluster_jazz {
+		color="#4f42a6" label=jazz
+		jazz -> "acid jazz"
+		jazz -> "avant-garde jazz"
+		jazz -> bebop
+		jazz -> "big band"
+		jazz -> "contemporary jazz"
+		jazz -> "cool jazz"
+		jazz -> "dark jazz"
+		jazz -> "experimental big band"
+		jazz -> "free jazz"
+		jazz -> "hard bop"
+		jazz -> "jazz fusion"
+		jazz -> "jazz-funk"
+		jazz -> "modal jazz"
+		jazz -> "nu jazz"
+		jazz -> "post-bop"
+		jazz -> "smooth jazz"
+		jazz -> "spiritual jazz"
+		jazz -> swing
+		jazz -> "vocal jazz"
+	}
+	subgraph cluster_pop {
+		color="#0726b2" label=pop
+		pop -> "ambient pop"
+		pop -> anime
+		pop -> "art pop"
+		pop -> "baroque pop"
+		pop -> "bedroom pop"
+		pop -> "chamber pop"
+		pop -> "city pop"
+		pop -> denpa
+		pop -> "easy listening"
+		pop -> electropop
+		pop -> "indie pop"
+		pop -> "pop rock"
+		subgraph "cluster_pop rock" {
+			color="#672dcb" label="pop rock"
+			"pop rock" -> "power pop"
+			"pop rock" -> "soft rock"
+		}
+		pop -> "shibuya-kei"
+		pop -> synthpop
+		pop -> "teen pop"
+	}
+	subgraph "cluster_r&b" {
+		color="#ba19b4" label="r&b"
+		"r&b" -> boogie
+		"r&b" -> "doo-wop"
+		"r&b" -> funk
+		subgraph cluster_funk {
+			color="#606180" label=funk
+			funk -> afrobeat
+		}
+		"r&b" -> soul
+	}
+	subgraph cluster_rock {
+		color="#1fb853" label=rock
+		rock -> "alternative rock"
+		subgraph "cluster_alternative rock" {
+			color="#f3f26e" label="alternative rock"
+			"alternative rock" -> "alt-country"
+			"alternative rock" -> "alternative dance"
+			"alternative rock" -> "alternative metal"
+			subgraph "cluster_alternative metal" {
+				color="#46a5cb" label="alternative metal"
+				"alternative metal" -> "funk metal"
+				"alternative metal" -> "nu metal"
+				"alternative metal" -> "rap metal"
+			}
+			"alternative rock" -> "alternative pop"
+			"alternative rock" -> britpop
+			"alternative rock" -> "dream pop"
+			"alternative rock" -> grunge
+			"alternative rock" -> "indie rock"
+			subgraph "cluster_indie rock" {
+				color="#e2b1fb" label="indie rock"
+				"indie rock" -> "indie folk"
+				"indie rock" -> "indie pop"
+				"indie rock" -> "lo-fi"
+				"indie rock" -> "new rave"
+				"indie rock" -> slowcore
+			}
+			"alternative rock" -> shoegaze
+		}
+		rock -> aor
+		rock -> "art rock"
+		rock -> "blues rock"
+		rock -> "country rock"
+		rock -> "experimental rock"
+		subgraph "cluster_experimental rock" {
+			color="#3ad30f" label="experimental rock"
+			"experimental rock" -> "avant-prog"
+			subgraph "cluster_avant-prog" {
+				color="#5a4603" label="avant-prog"
+				"avant-prog" -> zeuhl
+			}
+			"experimental rock" -> "brutal prog"
+			"experimental rock" -> krautrock
+			"experimental rock" -> "no wave"
+		}
+		rock -> "folk rock"
+		rock -> "garage rock"
+		rock -> "glam rock"
+		rock -> "hard rock"
+		rock -> "jam band"
+		rock -> "math rock"
+		rock -> metal
+		subgraph cluster_metal {
+			color="#73ff60" label=metal
+			metal -> "alternative metal"
+			subgraph "cluster_alternative metal" {
+				color="#e42b7a" label="alternative metal"
+				"alternative metal" -> "funk metal"
+				"alternative metal" -> "nu metal"
+				"alternative metal" -> "rap metal"
+			}
+			metal -> "black metal"
+			subgraph "cluster_black metal" {
+				color="#4ed265" label="black metal"
+				"black metal" -> "ambient black metal"
+				"black metal" -> "atmospheric black metal"
+				"black metal" -> "avant-garde black metal"
+				"black metal" -> "black 'n' roll"
+				"black metal" -> blackgaze
+				"black metal" -> "depressive black metal"
+				"black metal" -> "experimental black metal"
+				"black metal" -> "industrial black metal"
+				"black metal" -> "melodic black metal"
+				"black metal" -> "pagan black metal"
+				"black metal" -> "post-black metal"
+				"black metal" -> "progressive black metal"
+				"black metal" -> "symphonic black metal"
+				"black metal" -> "technical black metal"
+			}
+			metal -> "cyber metal"
+			metal -> "death metal"
+			subgraph "cluster_death metal" {
+				color="#405e69" label="death metal"
+				"death metal" -> "atmospheric death metal"
+				"death metal" -> "avant-garde death metal"
+				"death metal" -> "blackened death metal"
+				"death metal" -> "brutal death metal"
+				"death metal" -> "melodic death metal"
+				"death metal" -> "progressive death metal"
+				"death metal" -> "symphonic death metal"
+				"death metal" -> "technical death metal"
+			}
+			metal -> "doom metal"
+			subgraph "cluster_doom metal" {
+				color="#f844c8" label="doom metal"
+				"doom metal" -> "funeral doom metal"
+			}
+			metal -> "drone metal"
+			metal -> "folk metal"
+			subgraph "cluster_folk metal" {
+				color="#d8668c" label="folk metal"
+				"folk metal" -> "oriental metal"
+			}
+			metal -> "glam metal"
+			metal -> "gothic metal"
+			metal -> "groove metal"
+			metal -> "heavy metal"
+			subgraph "cluster_heavy metal" {
+				color="#f20fcb" label="heavy metal"
+				"heavy metal" -> nwobhm
+			}
+			metal -> "industrial metal"
+			metal -> metalcore
+			subgraph cluster_metalcore {
+				color="#0c7243" label=metalcore
+				metalcore -> deathcore
+				metalcore -> mathcore
+				metalcore -> "melodic metalcore"
+				metalcore -> "progressive metalcore"
+			}
+			metal -> "pagan metal"
+			metal -> "post-metal"
+			metal -> "power metal"
+			metal -> "progressive metal"
+			subgraph "cluster_progressive metal" {
+				color="#17ed70" label="progressive metal"
+				"progressive metal" -> "avant-garde metal"
+				"progressive metal" -> djent
+				"progressive metal" -> "jazz metal"
+				"progressive metal" -> "math metal"
+				"progressive metal" -> "progressive black metal"
+				"progressive metal" -> "progressive death metal"
+				"progressive metal" -> "progressive deathcore"
+				"progressive metal" -> "progressive metalcore"
+				"progressive metal" -> "progressive power metal"
+				"progressive metal" -> "progressive thrash metal"
+			}
+			metal -> "sludge metal"
+			subgraph "cluster_sludge metal" {
+				color="#5a5d26" label="sludge metal"
+				"sludge metal" -> "atmospheric sludge metal"
+			}
+			metal -> "speed metal"
+			metal -> "stoner metal"
+			metal -> "symphonic metal"
+			metal -> "thrash metal"
+			metal -> "viking metal"
+		}
+		rock -> "new wave"
+		rock -> "noise rock"
+		rock -> "pop rock"
+		subgraph "cluster_pop rock" {
+			color="#82b6db" label="pop rock"
+			"pop rock" -> "power pop"
+			"pop rock" -> "soft rock"
+		}
+		rock -> "post-rock"
+		rock -> "progressive rock"
+		subgraph "cluster_progressive rock" {
+			color="#672d1a" label="progressive rock"
+			"progressive rock" -> "andalusian rock"
+			"progressive rock" -> "avant-prog"
+			subgraph "cluster_avant-prog" {
+				color="#72927a" label="avant-prog"
+				"avant-prog" -> zeuhl
+			}
+			"progressive rock" -> "brutal prog"
+			"progressive rock" -> "canterbury scene"
+			"progressive rock" -> "crossover prog"
+			"progressive rock" -> "eclectic prog"
+			"progressive rock" -> "heavy prog"
+			"progressive rock" -> "jazz rock"
+			"progressive rock" -> krautrock
+			"progressive rock" -> "neo-prog"
+			"progressive rock" -> "progressive folk"
+			"progressive rock" -> "proto-prog"
+			"progressive rock" -> "symphonic prog"
+			"progressive rock" -> zeuhl
+			"progressive rock" -> zolo
+		}
+		rock -> "psychedelic rock"
+		subgraph "cluster_psychedelic rock" {
+			color="#cd676c" label="psychedelic rock"
+			"psychedelic rock" -> "acid rock"
+			"psychedelic rock" -> "heavy psych"
+			"psychedelic rock" -> "neo-psychedelia"
+			"psychedelic rock" -> "psychedelic folk"
+			subgraph "cluster_psychedelic folk" {
+				color="#7161ac" label="psychedelic folk"
+				"psychedelic folk" -> "freak folk"
+			}
+			"psychedelic rock" -> "psychedelic soul"
+			"psychedelic rock" -> "raga rock"
+			"psychedelic rock" -> "space rock"
+		}
+		rock -> "punk rock"
+		subgraph "cluster_punk rock" {
+			color="#002a55" label="punk rock"
+			"punk rock" -> "art punk"
+			"punk rock" -> "dance-punk"
+			"punk rock" -> emo
+			subgraph cluster_emo {
+				color="#ba9670" label=emo
+				emo -> emoviolence
+				emo -> screamo
+			}
+			"punk rock" -> "garage punk"
+			"punk rock" -> "hardcore punk"
+			subgraph "cluster_hardcore punk" {
+				color="#63967f" label="hardcore punk"
+				"hardcore punk" -> grindcore
+				"hardcore punk" -> "melodic hardcore"
+				"hardcore punk" -> metalcore
+				subgraph cluster_metalcore {
+					color="#eb00fc" label=metalcore
+					metalcore -> deathcore
+					metalcore -> mathcore
+					metalcore -> "melodic metalcore"
+					metalcore -> "progressive metalcore"
+				}
+				"hardcore punk" -> "post-hardcore"
+			}
+			"punk rock" -> "pop punk"
+			"punk rock" -> "post-punk"
+			subgraph "cluster_post-punk" {
+				color="#780849" label="post-punk"
+				"post-punk" -> coldwave
+				"post-punk" -> "gothic rock"
+			}
+			"punk rock" -> "proto-punk"
+			"punk rock" -> "ska punk"
+			"punk rock" -> "skate punk"
+			"punk rock" -> "synth punk"
+		}
+		rock -> "rock and roll"
+		subgraph "cluster_rock and roll" {
+			color="#32a350" label="rock and roll"
+			"rock and roll" -> rockabilly
+		}
+		rock -> "southern rock"
+		rock -> "stoner rock"
+		rock -> "surf rock"
+	}
+	subgraph cluster_soundtracks {
+		color="#0031e6" label=soundtracks
+		soundtracks -> "film score"
+		soundtracks -> "video game music"
+	}
+}
